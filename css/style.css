@@ -1,10 +1,2 @@
-@import './reset.css';
 @import './global.css';
 
-:root {
-    --bg-clr: #222;
-    --text-clr: #ddd;
-    --theme-clr: crimson;
-    --pill-clr-1: teal;
-    --pill-clr-2: royalblue;
-}

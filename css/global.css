@@ -1,22 +1,5 @@
-:root {
-    /* COLORS */
-    --primary: #231651;
-    --secondary: #ff8484;
-    --secondary-shade: #ff5151;
-    --tertiary: #2c988c;
-    --tertiary-glare: #d6fff6;
-    --quaternary: #2374ab;
-    --light: #fafafa;
-    --light-shade: #eeeeee;
-    --grey: #c4c4c4;
-
-    /* FONT SIZE */
-    --text-300: .8rem;
-    --text-400: 1rem;
-    --text-500: 1.25rem;
-    --text-600: 1.75rem;
-    --text-700: 2.25rem;
-} 
+@import './config.css';
+@import './reset.css';
 
 /* Global CSS starts */
 body {
@@ -39,11 +22,6 @@ h2 {
     font-size: var(--text-600);
 }
 
-/* h3 {
-    font-size: var(--text-400);
-    color: var(--secondary);
-} */
-
 a {
     color: currentColor;
 }
@@ -60,3 +38,8 @@ th {
     outline: 2px dotted;
     outline-offset: 0.25rem;
 }
+
+@import './utilities/wrapper.css';
+@import './utilities/flow.css';
+@import './utilities/visually-hidden.css';
+@import './utilities/radius.css';
