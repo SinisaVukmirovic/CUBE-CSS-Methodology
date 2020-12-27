@@ -1,45 +1,40 @@
 @import './config.css';
 @import './reset.css';
 
-/* Global CSS starts */
+/* GLOBAL STYLES */
 body {
-  line-height: 1.5;
-  overflow-x: hidden;
-  padding-bottom: 2rem;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
-
-h1 {
-    font-size: var(--text-700);
-}
-
-h2 {
-    font-size: var(--text-600);
-}
-
-a {
-    color: currentColor;
-}
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding-bottom: var(--size-600);
+  }
   
-table {
-    border-collapse: collapse;
-}
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
   
-th {
-    text-align: left;
-}
+  h1 {
+      font-size: var(--size-700);
+  }
   
-:focus {
-    outline: 2px dotted;
-    outline-offset: 0.25rem;
-}
-
-@import './utilities/wrapper.css';
-@import './utilities/flow.css';
-@import './utilities/visually-hidden.css';
-@import './utilities/radius.css';
+  h2 {
+      font-size: var(--size-600);
+  }
+  
+  a {
+      color: currentColor;
+  }
+    
+  table {
+      border-collapse: collapse;
+  }
+    
+  th {
+      text-align: left;
+  }
+    
+  :focus {
+      outline: 2px dotted;
+      outline-offset: 0.25rem;
+  }

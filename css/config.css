@@ -1,25 +1,26 @@
 :root {
-/* =========== COLOURS =========== */
-    --color-primary: #231651;
-    --color-secondary: #ff8484;
-    --color-secondary-shade: #ff5151;
-    --color-tertiary: #2c988c;
-    --color-tertiary-glare: #d6fff6;
-    --color-quaternary: #2374ab;
-    --color-light: #fafafa;
-    --color-light-shade: #eeeeee;
-    --color-grey: #c4c4c4;
-
-/* =========== SPACING =========== */
-    --size-300: 0.8rem;
+    /* SIZE */
+    --size-300: .8rem;
     --size-400: 1rem;
     --size-500: 1.33rem;
     --size-600: 1.77rem;
     --size-700: 2.4rem;
 
-    --breakpoints-md: 48em;
+    /* COLORS */
+    --clr-primary: #231651;
+    --clr-secondary: #ff8484;
+    --clr-secondary-shade: #ff5151;
+    --clr-tertiary: #2c988c;
+    --clr-tertiary-glare: #d6fff6;
+    --clr-quaternary: #2374ab;
+    --clr-light: #fafafa;
+    --clr-light-shade: #eeeeee;
+    --clr-grey: #c4c4c4;
 
-/* ============ FONTS ============ */
+    /* FONT WEIGHT */
     --weight-medium: 500;
     --weight-bold: 700;
+
+    /* BREAKPOINTS */
+    --breakpoints-md: 48em;
 }
