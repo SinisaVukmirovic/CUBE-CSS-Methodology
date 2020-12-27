@@ -1,4 +1,4 @@
-@import './config.css';
+@import '../config.css';
 
 /* COLOURS */
 .bg-primary { background: var(--color-primary); }

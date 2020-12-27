@@ -7,20 +7,23 @@
     --size-700: 2.4rem;
 
     /* COLORS */
-    --clr-primary: #231651;
-    --clr-secondary: #ff8484;
-    --clr-secondary-shade: #ff5151;
-    --clr-tertiary: #2c988c;
-    --clr-tertiary-glare: #d6fff6;
-    --clr-quaternary: #2374ab;
-    --clr-light: #fafafa;
-    --clr-light-shade: #eeeeee;
-    --clr-grey: #c4c4c4;
+    --color-primary: #231651;
+    --color-secondary: #ff8484;
+    --color-secondary-shade: #ff5151;
+    --color-tertiary: #2c988c;
+    --color-tertiary-glare: #d6fff6;
+    --color-quaternary: #2374ab;
+    --color-light: #fafafa;
+    --color-light-shade: #eeeeee;
+    --color-grey: #c4c4c4;
+
+    --font-base: sans-serif;
+    --font-mono: Impact;
 
     /* FONT WEIGHT */
     --weight-medium: 500;
     --weight-bold: 700;
 
     /* BREAKPOINTS */
-    --breakpoints-md: 48em;
+    /* --breakpoints-md: 48em; */
 }

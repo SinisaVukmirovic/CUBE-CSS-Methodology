@@ -1,0 +1,37 @@
+@import '../config.css';
+/* Wrapper
+The wrapper gives us a consistent max-width container with a bit of gutter. This is destined to be a utility because remember: a utility does one job and does it well. */
+.wrapper {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--size-500);
+}
+
+/* Flow
+This is a super tiny utility that adds margin to child sibling elements, using a lobotomised owl selector. This means that we get tonnes of flexibility, because any element will be affected (unless they are display: inline) and we don’t have to add daft CSS that targets last children to remove spacing. */
+.flow > * + * {
+    margin-top: var(--flow-space, 1rem);
+}
+
+/* Splitter
+This utility gives us our main responsive layout, which is two elements pushed away from each other at larger viewports. */
+.splitter:last-child {
+    margin-top: get-size('500');
+}
+
+@media (min-width: 42em) {
+    .splitter {
+        display: flex;
+    }
+
+    .splitter > * {
+        flex-grow: 1;
+    }
+
+    .splitter > :last-child {
+        margin-top: 0;
+        margin-left: var(--size-500);
+        min-width: 22rem;
+    }
+}

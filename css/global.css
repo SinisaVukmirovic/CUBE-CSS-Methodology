@@ -1,40 +1,42 @@
-@import './config.css';
 @import './reset.css';
+@import './config.css';
+@import './utility/utility.css';
+@import './composition/composition.css';
 
 /* GLOBAL STYLES */
 body {
     line-height: 1.5;
     overflow-x: hidden;
     padding-bottom: var(--size-600);
-  }
-  
-  h1,
-  h2,
-  h3 {
+}
+
+h1,
+h2,
+h3 {
     line-height: 1.2;
-  }
-  
-  h1 {
-      font-size: var(--size-700);
-  }
-  
-  h2 {
-      font-size: var(--size-600);
-  }
-  
-  a {
-      color: currentColor;
-  }
-    
-  table {
-      border-collapse: collapse;
-  }
-    
-  th {
-      text-align: left;
-  }
-    
-  :focus {
-      outline: 2px dotted;
-      outline-offset: 0.25rem;
-  }
+}
+
+h1 {
+    font-size: var(--size-700);
+}
+
+h2 {
+    font-size: var(--size-600);
+}
+
+a {
+    color: currentColor;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+:focus {
+    outline: 2px dotted;
+    outline-offset: 0.25rem;
+}
