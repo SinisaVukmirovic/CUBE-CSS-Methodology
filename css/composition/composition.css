@@ -35,3 +35,23 @@ This utility gives us our main responsive layout, which is two elements pushed a
         min-width: 22rem;
     }
 }
+
+/* Visually hidden
+This utility does what it says on the tin: it visually hides stuff. Using this utility instead of using display: none means that screen reader users can still access the content. In our project, this mainly affects the table headers. */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* Radius
+Last up in these utilities is radius. This one isn’t technically a compositional rule, but while we’re in here, we might as well add it. */
+.radius {
+    border-radius: 0.5rem;
+}
