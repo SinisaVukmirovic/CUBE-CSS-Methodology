@@ -2,6 +2,7 @@
 @import './config.css';
 @import './utility/utility.css';
 @import './composition/composition.css';
+@import './blocks/blocks.css';
 
 /* GLOBAL STYLES */
 body {

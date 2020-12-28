@@ -1,0 +1,95 @@
+@import '../config.css';
+
+/* Adding our blocks */
+/* The main theme of this block is to create an auto-wrapping flex layout. We’ve only got two elements: a heading and a user block—which we’ll build next—that should never collide with each other. We guarantee this by building a force-field around our <h1> with margin. */
+
+.site-head {
+    padding: 0.8rem 0;
+}
+  
+.site-head .site-head__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Right margin prevents any collisions with the title */
+.site-head .site-head__inner h1 {
+    margin: 0.5rem 1rem 0.5rem 0;
+}
+
+/* Firstly, we use inline-grid because we want this block to only be as big as the content inside it. For that same reason, we use max-content in the grid-template-columns declaration. Lastly, we again, directly target the HTML <img> element and apply our 100% radius. */
+.user {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: max-content 50px;
+    grid-gap: get-size('300');
+}
+  
+.user img {
+    border-radius: 100%;
+}
+
+/* Key header
+This is the element that introduces our transactions and summary. It provides a label for that data and also some key actions. It’s already got the splitter on it, so in true CUBE CSS fashion, we are using this block to create more contextual specificity. */
+/* The key area to focus on, though, is the :last-child, which is a group of buttons. We use a wrapping flex container, like in the site-head, but we use gap to space the items. A progressive enhancement pro tip follows as we add a tiny bit of vertical and horizontal margin to the elements. This is our fallback for if gap isn’t supported. Because it’s such a tiny amount of margin, it barely makes a scratch on the overall layout too. */
+.key-header {
+    align-items: flex-end;
+}
+  
+.key-header > :last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-300);
+}
+  
+.key-header > :last-child > * {
+    flex-shrink: 0;
+    margin: 0.2rem 0 0 0.2rem;
+}
+
+@media (min-width: 42em) {
+    .key-header > :last-child {
+        justify-content: flex-end;
+    }
+}
+
+/* This is a pretty generic button. In our context, both buttons are links, but we should always style a button to be a real <button> too. This is why we use font: inherit, to level the playing field by inheriting the base font rules. */
+/* This one: &[data-variant='ghost'], sets specific styles for a “ghost button”, which has no background and instead, has a visible border. */
+.button { 
+    border-radius: 0.5rem;
+  
+    font: inherit;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-secondary);
+    padding: 0.6rem 1.5rem;
+    position: relative;
+  
+    font-weight: var(--weight-bold);
+
+    transition: transform 250ms ease-in-out;
+}
+  
+.button[data-variant='ghost'] {
+    border-color: currentColor;
+    background: transparent;
+}
+  
+.button:focus {
+    outline-offset: -0.4rem;
+    outline: 1px solid;
+}
+  
+.button:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-light);
+}
+  
+.button:active {
+    transform: scale(0.98);
+}
