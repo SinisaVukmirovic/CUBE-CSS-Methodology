@@ -23,12 +23,13 @@
 .user {
     display: inline-grid;
     align-items: center;
-    grid-template-columns: max-content 50px;
+    grid-template-columns: max-content 1fr;
     grid-gap: get-size('300');
 }
   
 .user img {
     border-radius: 100%;
+    margin-left: 1rem;
 }
 
 /* Key header
@@ -55,6 +56,7 @@ This is the element that introduces our transactions and summary. It provides a 
     }
 }
 
+/* Button */
 /* This is a pretty generic button. In our context, both buttons are links, but we should always style a button to be a real <button> too. This is why we use font: inherit, to level the playing field by inheriting the base font rules. */
 /* This one: &[data-variant='ghost'], sets specific styles for a “ghost button”, which has no background and instead, has a visible border. */
 .button { 
@@ -92,4 +94,81 @@ This is the element that introduces our transactions and summary. It provides a 
   
 .button:active {
     transform: scale(0.98);
+}
+
+/* Summary */
+/* The main thing we are doing here is controlling --flow-space by applying size ratio values. Because this Custom Property value is set in the block, it will only affect these elements. */
+.summary {
+    padding: var(--size-500) var(--size-500) var(--size-600) var(--size-600);
+    line-height: 1.1;
+}
+  
+.summary dl,
+.summary dt {
+    --flow-space: var(--size-700);
+}
+
+.summary dd {
+    --flow-space: var(--size-300);
+}
+
+/* Table group */
+/* We apply the visual border styles at the highest level. Then, we hide overflow because we want our tables to have a minimum width. */
+/* if you hide overflow and set a min-width, the data in the tables remains as intended and the user can swipe to see it. */
+/* The rest of the block is setting a “striped” effect by targeting odd rows and aligning the last column to the right, because they are numeric values. */
+.table-group {
+    border: 1px solid var(--color-grey);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+  
+.table-group h3 {
+    --flow-space: var(--size-600);
+}
+  
+.table-group table {
+    --flow-space: 0.2rem;
+
+    width: 100%;
+    min-width: 30rem;
+}
+    
+  
+.table-group td,
+.table-group h3 {
+    padding: 0.5rem 1rem;
+}
+  
+.table-group tr:first-child {
+    border-top: 1px solid var(--color-grey);
+}
+  
+.table-group tr:nth-child(odd) td {
+    background: var(--color-light-shade);
+}
+  
+.table-group td:nth-child(3) {
+    text-align: right;
+}
+
+/* Pill */
+/* There’s two tricks in here. The first is if there’s no bg- utility on there, we set the grey colour by default. The second is that we want to capitalise the text, but only if this is English content. We do that by only adding the CSS if an element with an en language attribute is its parent. */
+.pill {
+    display: inline-block;
+    padding: 0.3rem 0.35rem;
+    font-size: var(--size-400);
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+}
+  
+/* Apply a default background colour if no token set */
+.pill:not([class*='bg-']) {
+    background: var(--color-grey);
+}
+  
+/* Capitalize only in english */
+.pill[lang*='en'] {
+    text-transform: capitalize;
 }
