@@ -7,18 +7,18 @@
     --size-700: 2.4rem;
 
     /* COLORS */
-    --color-primary: #231651;
+    --color-primary: #432e8b;
     --color-secondary: #ff8484;
     --color-secondary-shade: #ff5151;
     --color-tertiary: #2c988c;
-    --color-tertiary-glare: #d6fff6;
+    --color-tertiary-glare: #a7ecdd;
     --color-quaternary: #2374ab;
     --color-light: #fafafa;
     --color-light-shade: #eeeeee;
     --color-grey: #c4c4c4;
 
     --font-base: sans-serif;
-    --font-mono: Impact;
+    --font-mono: impact;
 
     /* FONT WEIGHT */
     --weight-medium: 500;
